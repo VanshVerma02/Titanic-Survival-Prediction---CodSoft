@@ -1,80 +1,77 @@
-Titanic Survival Prediction 🚢
-This project uses the Titanic dataset to build a machine learning model that predicts whether a passenger survived or not, based on features like age, gender, ticket class, and fare.
+# 🚢 Titanic Survival Prediction
 
-📂 Dataset
-The dataset contains information about individual Titanic passengers, such as:
+This project uses machine learning to predict whether a passenger survived the Titanic disaster based on features like age, gender, class, and fare. It walks through a complete data science pipeline — from data cleaning to model evaluation — using the Titanic dataset.
 
-PassengerId
+---
 
-Survived (Target Variable: 0 = No, 1 = Yes)
+## 📂 Dataset Overview
 
-Pclass (Ticket class)
+The dataset includes details about each passenger:
 
-Name
+* **Target**: `Survived` (0 = No, 1 = Yes)
+* **Features**: `Pclass`, `Sex`, `Age`, `SibSp`, `Parch`, `Fare`, `Embarked`, etc.
 
-Sex
+Missing values were handled, categorical variables were encoded, and irrelevant columns like `Name`, `Cabin`, and `Ticket` were removed.
 
-Age
+---
 
-SibSp (No. of siblings/spouses aboard)
+## 🛠️ Tools & Libraries Used
 
-Parch (No. of parents/children aboard)
+* **Python**
+* **Pandas**, **NumPy** – Data handling
+* **Seaborn**, **Matplotlib** – Visualization
+* **Scikit-learn** – Machine learning models and evaluation
+* **Jupyter Notebook** – Development environment
 
-Ticket
+---
 
-Fare
+## 📊 Workflow Summary
 
-Cabin
+1. **Data Cleaning**
 
-Embarked (Port of Embarkation)
+   * Handled missing values (e.g., `Age`, `Embarked`)
+   * Dropped columns with excessive nulls (`Cabin`)
 
-🛠️ Tools & Libraries Used
-Python
+2. **Feature Encoding**
 
-Pandas
+   * Converted `Sex` and `Embarked` to numerical format
 
-NumPy
+3. **Model Building**
 
-Scikit-learn
+   * Used **Random Forest Classifier**
+   * Trained on 80% of the data and tested on 20%
 
-Matplotlib
+4. **Evaluation Metrics**
 
-Seaborn
+   * Accuracy Score: **0.81**
+   * Classification Report:
 
-Jupyter Notebook
+     * Precision (Class 0): 0.83 | (Class 1): 0.79
+     * Recall (Class 0): 0.86 | (Class 1): 0.74
+     * F1-Score Avg: **0.80**
 
-📊 Approach
-Data Cleaning:
+5. **Feature Importance (Optional)**
 
-Handling missing values
+   * Visualized which features contributed most to predictions.
 
-Converting categorical variables to numeric
+---
 
-Dropping irrelevant columns
+## ✅ Key Results
 
-Exploratory Data Analysis (EDA):
+* Achieved **81% accuracy** on unseen data.
+* Most important features: **Sex**, **Pclass**, **Fare**, and **Age**.
+* Females and higher-class passengers had a better chance of survival.
 
-Understanding data distribution
+---
 
-Visualizing survival trends based on features like gender, age, class, etc.
+## 📌 Conclusion
 
-Feature Engineering:
+This beginner-friendly ML project demonstrates the real-world application of classification algorithms, EDA, and feature engineering using the Titanic dataset.
 
-Creating new features
+---
 
-Scaling/encoding existing ones
+## 👤 Author
 
-Model Building:
+**Vansh Verma**
+*Machine Learning & Data Science Enthusiast*
 
-Applied classification algorithms (e.g., Logistic Regression, Decision Tree, Random Forest)
-
-Performance evaluation using accuracy, confusion matrix, and classification report
-
-✅ Results
-Achieved high accuracy in predicting passenger survival with the best-performing model.
-
-📌 Conclusion
-The project showcases how basic machine learning and data preprocessing techniques can be applied to historical datasets for predictive analysis.
-
-Author
-Vansh Verma
